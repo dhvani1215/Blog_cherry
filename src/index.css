@@ -1,0 +1,75 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
+
+@layer base {
+  :root {
+    --background: 254 247 247;
+    --foreground: 128 37 68;
+
+    --card: 254 247 247;
+    --card-foreground: 128 37 68;
+
+    --popover: 254 247 247;
+    --popover-foreground: 128 37 68;
+
+    --primary: 236 72 153;
+    --primary-foreground: 254 247 247;
+
+    --secondary: 251 217 221;
+    --secondary-foreground: 128 37 68;
+
+    --muted: 253 237 239;
+    --muted-foreground: 151 38 74;
+
+    --accent: 251 217 221;
+    --accent-foreground: 128 37 68;
+
+    --destructive: 239 68 68;
+    --destructive-foreground: 254 247 247;
+
+    --border: 251 217 221;
+    --input: 251 217 221;
+    --ring: 236 72 153;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 254 247 247;
+    --sidebar-foreground: 128 37 68;
+    --sidebar-primary: 236 72 153;
+    --sidebar-primary-foreground: 254 247 247;
+    --sidebar-accent: 251 217 221;
+    --sidebar-accent-foreground: 128 37 68;
+    --sidebar-border: 251 217 221;
+    --sidebar-ring: 236 72 153;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-white text-foreground min-h-screen;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  .spring-text-gradient {
+    background: linear-gradient(135deg, #ec4899 0%, #be185d 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glass-effect {
+    background: rgba(254, 247, 247, 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(251, 217, 221, 0.3);
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
